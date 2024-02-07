@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css"> 
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      body { margin: 0; padding-bottom: 3rem; font-family: Helvetica, Arial, sans-serif; }
+
+      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 2%; left: 15%; right: 15%; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input:focus { outline: none; }
+      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+      #messages { list-style-type: none; margin: 10%; padding: 0; }
+      #messages > li { padding: 0.5rem 1rem; color:white; }
+      /* #messages > li:nth-child(odd) { background: #70a3ab; } */
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Добро пожаловать в чат!</h2>
+                <div class="form-input">
+                    <input type="text" id="username" placeholder="Введите логин">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Нажмите "Enter", чтобы начать общение</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="second">
+      <ul id="messages"></ul>
+      <form id="form" action="none" class="formtext">
+        <input id="input" placeholder="Напишите что-нибудь..." autocomplete="off" /><button>Отправить</button>
+      </form>
+    </div>  
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+     
+    </script>
+    <script type="text/javascript" src="client.js"></script>
+  </body>
+</html>
